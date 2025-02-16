@@ -1,0 +1,23 @@
+{
+  "fileTypes": [
+    "go"
+  ],
+  "injectionSelector": "L:source.go -comment -string",
+  "patterns": [
+    {
+      "begin": "(?i)(\\s?\\/\\*\\s?(yml|yaml)\\s?\\*\\/\\s?)(`)",
+      "beginCaptures": {
+        "1": {
+          "name": "comment.block"
+        }
+      },
+      "end": "(`)",
+      "patterns": [
+        {
+          "include": "source.yaml"
+        }
+      ]
+    }
+  ],
+  "scopeName": "go-inline.yml"
+}

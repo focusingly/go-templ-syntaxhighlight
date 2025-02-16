@@ -1,0 +1,23 @@
+{
+  "fileTypes": [
+    "go"
+  ],
+  "injectionSelector": "L:source.go -comment -string",
+  "patterns": [
+    {
+      "begin": "(?i)(\\s?\\/\\*\\s?(html|template)\\s?\\*\\/\\s?)(`)",
+      "beginCaptures": {
+        "1": {
+          "name": "comment.block"
+        }
+      },
+      "end": "(`)",
+      "patterns": [
+        {
+          "include": "text.html.basic"
+        }
+      ]
+    }
+  ],
+  "scopeName": "go-inline.html"
+}

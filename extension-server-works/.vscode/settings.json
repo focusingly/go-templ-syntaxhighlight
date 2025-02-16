@@ -1,0 +1,8 @@
+{
+    "files.readonlyInclude": {
+        "D:/Modules/**": true
+    },
+    "cSpell.words": [
+        "Templ"
+    ],
+}

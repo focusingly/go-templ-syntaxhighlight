@@ -1,0 +1,42 @@
+// A launch configuration that compiles the extension and then opens it inside a new window
+// Use IntelliSense to learn about possible attributes.
+// Hover to view descriptions of existing attributes.
+// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Go-Templ",
+      "type": "extensionHost",
+      "request": "launch",
+      "args": [
+        "--extensionDevelopmentPath=${workspaceFolder}",
+      ],
+      "cwd": "${workspaceFolder}",
+      "smartStep": true,
+      "debugWebviews": true,
+      "outFiles": [
+        "${workspaceFolder}/dist/**/*.js"
+      ],
+      "preLaunchTask": "${defaultBuildTask}"
+    },
+    {
+      "name": "Debug By Lsp-Net",
+      "type": "extensionHost",
+      "request": "launch",
+      "args": [
+        "--extensionDevelopmentPath=${workspaceFolder}",
+      ],
+      "cwd": "${workspaceFolder}",
+      "smartStep": true,
+      "debugWebviews": true,
+      "outFiles": [
+        "${workspaceFolder}/dist/**/*.js"
+      ],
+      "env": {
+        "PROD_MODE": "net-dbg"
+      },
+      "preLaunchTask": "${defaultBuildTask}"
+    },
+  ]
+}

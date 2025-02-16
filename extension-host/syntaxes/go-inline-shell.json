@@ -1,0 +1,23 @@
+{
+  "fileTypes": [
+    "go"
+  ],
+  "injectionSelector": "L:source.go -comment -string",
+  "patterns": [
+    {
+      "begin": "(?i)(\\s?\\/\\*\\s?(sh|shell)\\s?\\*\\/\\s?)(`)",
+      "beginCaptures": {
+        "1": {
+          "name": "comment.block"
+        }
+      },
+      "end": "(`)",
+      "patterns": [
+        {
+          "include": "source.shell"
+        }
+      ]
+    }
+  ],
+  "scopeName": "go-inline.shell"
+}

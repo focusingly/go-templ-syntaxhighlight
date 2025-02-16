@@ -1,0 +1,23 @@
+{
+  "fileTypes": [
+    "go"
+  ],
+  "injectionSelector": "L:source.go -comment -string",
+  "patterns": [
+    {
+      "begin": "(?i)(\\s?\\/\\*\\s?(lua)\\s?\\*\\/\\s?)(`)",
+      "beginCaptures": {
+        "1": {
+          "name": "comment.block"
+        }
+      },
+      "end": "(`)",
+      "patterns": [
+        {
+          "include": "source.lua"
+        }
+      ]
+    }
+  ],
+  "scopeName": "go-inline.lua"
+}

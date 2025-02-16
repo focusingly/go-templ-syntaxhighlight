@@ -1,0 +1,31 @@
+{
+  "fileTypes": [
+    "go"
+  ],
+  "injectionSelector": "L:source.go -comment -string",
+  "patterns": [
+    {
+      "begin": "(?i)(\\s?\\/\\*\\s?(md|markdown)\\s?\\*\\/\\s?)(`)",
+      "beginCaptures": {
+        "1": {
+          "name": "comment.block"
+        },
+        "3": {
+          "name": "string.template.go"
+        }
+      },
+      "end": "(`)",
+      "endCaptures": {
+        "1": {
+          "name": "string.template.go"
+        }
+      },
+      "patterns": [
+        {
+          "include": "text.html.markdown"
+        }
+      ]
+    }
+  ],
+  "scopeName": "go-inline.markdown"
+}

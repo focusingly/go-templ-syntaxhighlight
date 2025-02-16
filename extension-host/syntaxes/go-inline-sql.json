@@ -1,0 +1,29 @@
+{
+  "fileTypes": [
+    "go"
+  ],
+  "injectionSelector": "L:source.go -comment -string",
+  "patterns": [
+    {
+      "begin": "(?i)(\\s?\\/?\\*?\\s?(sql)\\s?\\*?\\/?\\s?)(`)",
+      "beginCaptures": {
+        "1": {
+          "name": "comment.block"
+        }
+      },
+      "end": "(`)",
+      "patterns": [
+        {
+          "include": "source.sql"
+        },
+        {
+          "include": "source.plpgsql.postgres"
+        },
+        {
+          "match": "."
+        }
+      ]
+    }
+  ],
+  "scopeName": "go-inline.sql"
+}

@@ -1,0 +1,264 @@
+{
+  "name": "go-templ-syntaxhighlight",
+  "displayName": "go-templ-syntaxhighlight",
+  "description": "go inline-embed code highlight, basic sql keyword completion, and test data insert",
+  "author": {
+    "name": "Shalling"
+  },
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "main": "./dist/extension.js",
+  "scripts": {
+    "vscode:prepublish": "pnpm run package",
+    "compile": "pnpm run check-types && pnpm run lint && node-ts esbuild.ts",
+    "watch": "npm-run-all -p watch:*",
+    "watch:esbuild": "node ./esbuild.mjs --watch",
+    "watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
+    "package": "pnpm run check-types && pnpm run lint && ts-node esbuild.js --production",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "pnpm run compile-tests && pnpm run compile && pnpm run lint",
+    "check-types": "tsc --noEmit",
+    "lint": "eslint --color --config ./eslint.config.ts --print-config ./src",
+    "lint-help": "eslint --help",
+    "test": "vscode-test"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "activationEvents": [
+    "onLanguage:go"
+  ],
+  "markdown": "github",
+  "contributes": {
+    "configuration": [
+      {
+        "id": "go-templ",
+        "title": "Go-Templ",
+        "properties": {
+          "conf.goTempl.uniqueID": {
+            "type": "string",
+            "contentEncoding": "utf-8",
+            "enum": [
+              "uuid-32",
+              "uuid-36",
+              "nano-id"
+            ],
+            "description": "The Default Unique ID Generate Resolution",
+            "default": "uuid-36",
+            "scope": "resource"
+          },
+          "conf.goTempl.time.format": {
+            "contentEncoding": "utf-8",
+            "type": "string",
+            "default": "YYYY/MM/DD HH:mm:ss.SSS",
+            "markdownDescription": "Time Format Style, See [dayjs doc](https://day.js.org/docs/en/display/format)",
+            "scope": "resource"
+          }
+        }
+      }
+    ],
+    "commands": [
+      {
+        "title": "Insert An Unique ID By Config",
+        "command": "go-templ:insert-uniqueID",
+        "category": "go-templ"
+      },
+      {
+        "title": "Insert Current Epoch Timestamp Seconds",
+        "command": "go-templ:insert-epoch-secs",
+        "category": "go-templ"
+      },
+      {
+        "title": "Insert Current Epoch Timestamp Milliseconds",
+        "command": "go-templ:insert-epoch-mills",
+        "category": "go-templ"
+      },
+      {
+        "title": "Insert Current Time Formatted String By Config",
+        "command": "go-templ:insert-fmt-time",
+        "category": "go-templ"
+      }
+    ],
+    "submenus": [
+      {
+        "id": "go.templ",
+        "label": "Go Templ"
+      }
+    ],
+    "menus": {
+      "go.templ": [
+        {
+          "command": "go-templ:insert-uniqueID",
+          "group": "navigation"
+        },
+        {
+          "command": "go-templ:insert-epoch-secs",
+          "group": "navigation"
+        },
+        {
+          "command": "go-templ:insert-epoch-mills",
+          "group": "navigation"
+        },
+        {
+          "command": "go-templ:insert-fmt-time",
+          "group": "navigation"
+        }
+      ],
+      "editor/context": [
+        {
+          "submenu": "go.templ",
+          "when": "editorLangId == 'go' && editorFocus"
+        }
+      ]
+    },
+    "grammars": [
+      {
+        "injectTo": [
+          "source.go",
+          "text.go"
+        ],
+        "scopeName": "go-inline.html",
+        "path": "./syntaxes/go-inline-css.json",
+        "embeddedLanguages": {
+          "meta.embedded.block.html": "html"
+        }
+      },
+      {
+        "injectTo": [
+          "source.go",
+          "text.go"
+        ],
+        "scopeName": "go-inline.css",
+        "path": "./syntaxes/go-inline-css.json",
+        "embeddedLanguages": {
+          "meta.embedded.block.html": "html"
+        }
+      },
+      {
+        "injectTo": [
+          "source.go",
+          "text.go"
+        ],
+        "scopeName": "go-inline.xml",
+        "path": "./syntaxes/go-inline-xml.json",
+        "embeddedLanguages": {
+          "meta.embedded.xml": "xml"
+        }
+      },
+      {
+        "injectTo": [
+          "source.go",
+          "text.go"
+        ],
+        "scopeName": "go-inline.yml",
+        "path": "./syntaxes/go-inline-yml.json",
+        "embeddedLanguages": {
+          "meta.embedded.block.yaml": "yaml"
+        }
+      },
+      {
+        "injectTo": [
+          "source.go",
+          "text.go"
+        ],
+        "scopeName": "go-inline.markdown",
+        "path": "./syntaxes/go-inline-markdown.json",
+        "embeddedLanguages": {
+          "meta.embedded.markdown": "markdown"
+        }
+      },
+      {
+        "injectTo": [
+          "source.go",
+          "text.go"
+        ],
+        "scopeName": "go-inline.shell",
+        "path": "./syntaxes/go-inline-shell.json",
+        "embeddedLanguages": {
+          "meta.embedded.block.shellscript": "shellscript"
+        }
+      },
+      {
+        "injectTo": [
+          "source.go",
+          "text.go"
+        ],
+        "scopeName": "go-inline.py",
+        "path": "./syntaxes/go-inline-python.json",
+        "embeddedLanguages": {
+          "meta.embedded.block.python": "python"
+        }
+      },
+      {
+        "injectTo": [
+          "source.go",
+          "text.go"
+        ],
+        "scopeName": "go-inline.lua",
+        "path": "./syntaxes/go-inline-lua.json",
+        "embeddedLanguages": {
+          "meta.embedded.lua": "lua"
+        }
+      },
+      {
+        "injectTo": [
+          "source.go",
+          "text.go"
+        ],
+        "scopeName": "go-inline.js",
+        "path": "./syntaxes/go-inline-js.json",
+        "embeddedLanguages": {
+          "meta.embedded.block.javascript": "javascript"
+        }
+      },
+      {
+        "injectTo": [
+          "source.go",
+          "text.go"
+        ],
+        "scopeName": "go-inline.sql",
+        "path": "./syntaxes/go-inline-sql.json",
+        "embeddedLanguages": {
+          "meta.embedded.block.sql": "sql"
+        }
+      },
+      {
+        "injectTo": [
+          "source.go",
+          "text.go"
+        ],
+        "scopeName": "go-inline.html",
+        "path": "./syntaxes/go-inline-html.json",
+        "embeddedLanguages": {
+          "meta.embedded.block.html": "html"
+        }
+      }
+    ]
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.96.0",
+    "@typescript-eslint/eslint-plugin": "^8.21.0",
+    "@typescript-eslint/parser": "^8.21.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "esbuild": "^0.24.0",
+    "esbuild-plugin-alias": "^0.2.1",
+    "eslint": "^9.16.0",
+    "jiti": "^2.4.2",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.4.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  },
+  "packageManager": "pnpm@9.12.2+sha512.22721b3a11f81661ae1ec68ce1a7b879425a1ca5b991c975b074ac220b187ce56c708fe5db69f4c962c989452eee76c82877f4ee80f474cebd61ee13461b6228",
+  "dependencies": {
+    "dayjs": "^1.11.13",
+    "nanoid": "^5.1.0",
+    "vscode-languageclient": "^9.0.1"
+  }
+}
