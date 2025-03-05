@@ -1,0 +1,837 @@
+ 0  *ast.File {
+     1  .  Package: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:1:1
+     2  .  Name: *ast.Ident {
+     3  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:1:9
+     4  .  .  Name: "main"
+     5  .  }
+     6  .  Decls: []ast.Decl (len = 4) {
+     7  .  .  0: *ast.GenDecl {
+     8  .  .  .  TokPos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:3:1
+     9  .  .  .  Tok: import
+    10  .  .  .  Lparen: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:3:8
+    11  .  .  .  Specs: []ast.Spec (len = 3) {
+    12  .  .  .  .  0: *ast.ImportSpec {
+    13  .  .  .  .  .  Path: *ast.BasicLit {
+    14  .  .  .  .  .  .  ValuePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:4:2
+    15  .  .  .  .  .  .  Kind: STRING
+    16  .  .  .  .  .  .  Value: "\"database/sql\""
+    17  .  .  .  .  .  }
+    18  .  .  .  .  .  EndPos: -
+    19  .  .  .  .  }
+    20  .  .  .  .  1: *ast.ImportSpec {
+    21  .  .  .  .  .  Path: *ast.BasicLit {
+    22  .  .  .  .  .  .  ValuePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:5:2
+    23  .  .  .  .  .  .  Kind: STRING
+    24  .  .  .  .  .  .  Value: "\"fmt\""
+    25  .  .  .  .  .  }
+    26  .  .  .  .  .  EndPos: -
+    27  .  .  .  .  }
+    28  .  .  .  .  2: *ast.ImportSpec {
+    29  .  .  .  .  .  Name: *ast.Ident {
+    30  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:7:2
+    31  .  .  .  .  .  .  Name: "lua"
+    32  .  .  .  .  .  }
+    33  .  .  .  .  .  Path: *ast.BasicLit {
+    34  .  .  .  .  .  .  ValuePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:7:6
+    35  .  .  .  .  .  .  Kind: STRING
+    36  .  .  .  .  .  .  Value: "\"github.com/yuin/gopher-lua\""
+    37  .  .  .  .  .  }
+    38  .  .  .  .  .  EndPos: -
+    39  .  .  .  .  }
+    40  .  .  .  }
+    41  .  .  .  Rparen: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:8:1
+    42  .  .  }
+    43  .  .  1: *ast.GenDecl {
+    44  .  .  .  TokPos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:10:1
+    45  .  .  .  Tok: var
+    46  .  .  .  Lparen: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:10:5
+    47  .  .  .  Specs: []ast.Spec (len = 8) {
+    48  .  .  .  .  0: *ast.ValueSpec {
+    49  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+    50  .  .  .  .  .  .  0: *ast.Ident {
+    51  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:11:2
+    52  .  .  .  .  .  .  .  Name: "cssStr"
+    53  .  .  .  .  .  .  .  Obj: *ast.Object {
+    54  .  .  .  .  .  .  .  .  Kind: var
+    55  .  .  .  .  .  .  .  .  Name: "cssStr"
+    56  .  .  .  .  .  .  .  .  Decl: *(obj @ 48)
+    57  .  .  .  .  .  .  .  .  Data: 0
+    58  .  .  .  .  .  .  .  }
+    59  .  .  .  .  .  .  }
+    60  .  .  .  .  .  }
+    61  .  .  .  .  .  Values: []ast.Expr (len = 1) {
+    62  .  .  .  .  .  .  0: *ast.BasicLit {
+    63  .  .  .  .  .  .  .  ValuePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:11:21
+    64  .  .  .  .  .  .  .  Kind: STRING
+    65  .  .  .  .  .  .  .  Value: "`\n\t\t.container {\n\t\t\twidth: 100%;\n\t\t\theight: 100%;\n\t\t}`"
+    66  .  .  .  .  .  .  }
+    67  .  .  .  .  .  }
+    68  .  .  .  .  }
+    69  .  .  .  .  1: *ast.ValueSpec {
+    70  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+    71  .  .  .  .  .  .  0: *ast.Ident {
+    72  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:16:2
+    73  .  .  .  .  .  .  .  Name: "tsStr"
+    74  .  .  .  .  .  .  .  Obj: *ast.Object {
+    75  .  .  .  .  .  .  .  .  Kind: var
+    76  .  .  .  .  .  .  .  .  Name: "tsStr"
+    77  .  .  .  .  .  .  .  .  Decl: *(obj @ 69)
+    78  .  .  .  .  .  .  .  .  Data: 1
+    79  .  .  .  .  .  .  .  }
+    80  .  .  .  .  .  .  }
+    81  .  .  .  .  .  }
+    82  .  .  .  .  .  Values: []ast.Expr (len = 1) {
+    83  .  .  .  .  .  .  0: *ast.BasicLit {
+    84  .  .  .  .  .  .  .  ValuePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:16:19
+    85  .  .  .  .  .  .  .  Kind: STRING
+    86  .  .  .  .  .  .  .  Value: "`\n\t\tconst str: string = \"hello world\"\n\t\t`"
+    87  .  .  .  .  .  .  }
+    88  .  .  .  .  .  }
+    89  .  .  .  .  }
+    90  .  .  .  .  2: *ast.ValueSpec {
+    91  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+    92  .  .  .  .  .  .  0: *ast.Ident {
+    93  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:19:2
+    94  .  .  .  .  .  .  .  Name: "htmlStr"
+    95  .  .  .  .  .  .  .  Obj: *ast.Object {
+    96  .  .  .  .  .  .  .  .  Kind: var
+    97  .  .  .  .  .  .  .  .  Name: "htmlStr"
+    98  .  .  .  .  .  .  .  .  Decl: *(obj @ 90)
+    99  .  .  .  .  .  .  .  .  Data: 2
+   100  .  .  .  .  .  .  .  }
+   101  .  .  .  .  .  .  }
+   102  .  .  .  .  .  }
+   103  .  .  .  .  .  Values: []ast.Expr (len = 1) {
+   104  .  .  .  .  .  .  0: *ast.BasicLit {
+   105  .  .  .  .  .  .  .  ValuePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:19:23
+   106  .  .  .  .  .  .  .  Kind: STRING
+   107  .  .  .  .  .  .  .  Value: "`<body><h2>{{.Name}}</h2></body>`"
+   108  .  .  .  .  .  .  }
+   109  .  .  .  .  .  }
+   110  .  .  .  .  }
+   111  .  .  .  .  3: *ast.ValueSpec {
+   112  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+   113  .  .  .  .  .  .  0: *ast.Ident {
+   114  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:21:2
+   115  .  .  .  .  .  .  .  Name: "xmlStr"
+   116  .  .  .  .  .  .  .  Obj: *ast.Object {
+   117  .  .  .  .  .  .  .  .  Kind: var
+   118  .  .  .  .  .  .  .  .  Name: "xmlStr"
+   119  .  .  .  .  .  .  .  .  Decl: *(obj @ 111)
+   120  .  .  .  .  .  .  .  .  Data: 3
+   121  .  .  .  .  .  .  .  }
+   122  .  .  .  .  .  .  }
+   123  .  .  .  .  .  }
+   124  .  .  .  .  .  Values: []ast.Expr (len = 1) {
+   125  .  .  .  .  .  .  0: *ast.BasicLit {
+   126  .  .  .  .  .  .  .  ValuePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:21:21
+   127  .  .  .  .  .  .  .  Kind: STRING
+   128  .  .  .  .  .  .  .  Value: "`\n\t\t<User>\n\t\t\t<Name type=\"string\">Hi!</Name>\n\t\t\t<Age type=\"integer\">23</Age>\n\t\t</User>`"
+   129  .  .  .  .  .  .  }
+   130  .  .  .  .  .  }
+   131  .  .  .  .  }
+   132  .  .  .  .  4: *ast.ValueSpec {
+   133  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+   134  .  .  .  .  .  .  0: *ast.Ident {
+   135  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:26:2
+   136  .  .  .  .  .  .  .  Name: "ymlStr"
+   137  .  .  .  .  .  .  .  Obj: *ast.Object {
+   138  .  .  .  .  .  .  .  .  Kind: var
+   139  .  .  .  .  .  .  .  .  Name: "ymlStr"
+   140  .  .  .  .  .  .  .  .  Decl: *(obj @ 132)
+   141  .  .  .  .  .  .  .  .  Data: 4
+   142  .  .  .  .  .  .  .  }
+   143  .  .  .  .  .  .  }
+   144  .  .  .  .  .  }
+   145  .  .  .  .  .  Values: []ast.Expr (len = 1) {
+   146  .  .  .  .  .  .  0: *ast.BasicLit {
+   147  .  .  .  .  .  .  .  ValuePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:26:21
+   148  .  .  .  .  .  .  .  Kind: STRING
+   149  .  .  .  .  .  .  .  Value: "`\n\t\tapp:\n\t\t  port: 8088\n\t\t`"
+   150  .  .  .  .  .  .  }
+   151  .  .  .  .  .  }
+   152  .  .  .  .  }
+   153  .  .  .  .  5: *ast.ValueSpec {
+   154  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+   155  .  .  .  .  .  .  0: *ast.Ident {
+   156  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:30:2
+   157  .  .  .  .  .  .  .  Name: "shStr"
+   158  .  .  .  .  .  .  .  Obj: *ast.Object {
+   159  .  .  .  .  .  .  .  .  Kind: var
+   160  .  .  .  .  .  .  .  .  Name: "shStr"
+   161  .  .  .  .  .  .  .  .  Decl: *(obj @ 153)
+   162  .  .  .  .  .  .  .  .  Data: 5
+   163  .  .  .  .  .  .  .  }
+   164  .  .  .  .  .  .  }
+   165  .  .  .  .  .  }
+   166  .  .  .  .  .  Values: []ast.Expr (len = 1) {
+   167  .  .  .  .  .  .  0: *ast.BasicLit {
+   168  .  .  .  .  .  .  .  ValuePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:30:19
+   169  .  .  .  .  .  .  .  Kind: STRING
+   170  .  .  .  .  .  .  .  Value: "`apt-get update && apt-get upgrade -y && yes | history -c`"
+   171  .  .  .  .  .  .  }
+   172  .  .  .  .  .  }
+   173  .  .  .  .  }
+   174  .  .  .  .  6: *ast.ValueSpec {
+   175  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+   176  .  .  .  .  .  .  0: *ast.Ident {
+   177  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:32:2
+   178  .  .  .  .  .  .  .  Name: "pyStr"
+   179  .  .  .  .  .  .  .  Obj: *ast.Object {
+   180  .  .  .  .  .  .  .  .  Kind: var
+   181  .  .  .  .  .  .  .  .  Name: "pyStr"
+   182  .  .  .  .  .  .  .  .  Decl: *(obj @ 174)
+   183  .  .  .  .  .  .  .  .  Data: 6
+   184  .  .  .  .  .  .  .  }
+   185  .  .  .  .  .  .  }
+   186  .  .  .  .  .  }
+   187  .  .  .  .  .  Values: []ast.Expr (len = 1) {
+   188  .  .  .  .  .  .  0: *ast.BasicLit {
+   189  .  .  .  .  .  .  .  ValuePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:32:19
+   190  .  .  .  .  .  .  .  Kind: STRING
+   191  .  .  .  .  .  .  .  Value: "`print('The product hello world')`"
+   192  .  .  .  .  .  .  }
+   193  .  .  .  .  .  }
+   194  .  .  .  .  }
+   195  .  .  .  .  7: *ast.ValueSpec {
+   196  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+   197  .  .  .  .  .  .  0: *ast.Ident {
+   198  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:34:2
+   199  .  .  .  .  .  .  .  Name: "luaStr"
+   200  .  .  .  .  .  .  .  Obj: *ast.Object {
+   201  .  .  .  .  .  .  .  .  Kind: var
+   202  .  .  .  .  .  .  .  .  Name: "luaStr"
+   203  .  .  .  .  .  .  .  .  Decl: *(obj @ 195)
+   204  .  .  .  .  .  .  .  .  Data: 7
+   205  .  .  .  .  .  .  .  }
+   206  .  .  .  .  .  .  }
+   207  .  .  .  .  .  }
+   208  .  .  .  .  .  Values: []ast.Expr (len = 1) {
+   209  .  .  .  .  .  .  0: *ast.BasicLit {
+   210  .  .  .  .  .  .  .  ValuePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:34:21
+   211  .  .  .  .  .  .  .  Kind: STRING
+   212  .  .  .  .  .  .  .  Value: "`\n\t\tfunction factorial(n)\n\t\t\tif n == 0 then\n\t\t\t\treturn 1\n\t\t\telse\n\t\t\t\treturn n * factorial(n - 1)\n\t\t\tend\n\t\tend\n\t\tprint(\"Factorial of 5: \" .. factorial(5))\n\t`"
+   213  .  .  .  .  .  .  }
+   214  .  .  .  .  .  }
+   215  .  .  .  .  }
+   216  .  .  .  }
+   217  .  .  .  Rparen: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:44:1
+   218  .  .  }
+   219  .  .  2: *ast.FuncDecl {
+   220  .  .  .  Name: *ast.Ident {
+   221  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:46:6
+   222  .  .  .  .  Name: "main"
+   223  .  .  .  .  Obj: *ast.Object {
+   224  .  .  .  .  .  Kind: func
+   225  .  .  .  .  .  Name: "main"
+   226  .  .  .  .  .  Decl: *(obj @ 219)
+   227  .  .  .  .  }
+   228  .  .  .  }
+   229  .  .  .  Type: *ast.FuncType {
+   230  .  .  .  .  Func: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:46:1
+   231  .  .  .  .  Params: *ast.FieldList {
+   232  .  .  .  .  .  Opening: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:46:10
+   233  .  .  .  .  .  Closing: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:46:11
+   234  .  .  .  .  }
+   235  .  .  .  }
+   236  .  .  .  Body: *ast.BlockStmt {
+   237  .  .  .  .  Lbrace: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:46:13
+   238  .  .  .  .  List: []ast.Stmt (len = 4) {
+   239  .  .  .  .  .  0: *ast.AssignStmt {
+   240  .  .  .  .  .  .  Lhs: []ast.Expr (len = 1) {
+   241  .  .  .  .  .  .  .  0: *ast.Ident {
+   242  .  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:47:2
+   243  .  .  .  .  .  .  .  .  Name: "L"
+   244  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   245  .  .  .  .  .  .  .  .  .  Kind: var
+   246  .  .  .  .  .  .  .  .  .  Name: "L"
+   247  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 239)
+   248  .  .  .  .  .  .  .  .  }
+   249  .  .  .  .  .  .  .  }
+   250  .  .  .  .  .  .  }
+   251  .  .  .  .  .  .  TokPos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:47:4
+   252  .  .  .  .  .  .  Tok: :=
+   253  .  .  .  .  .  .  Rhs: []ast.Expr (len = 1) {
+   254  .  .  .  .  .  .  .  0: *ast.CallExpr {
+   255  .  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+   256  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   257  .  .  .  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:47:7
+   258  .  .  .  .  .  .  .  .  .  .  Name: "lua"
+   259  .  .  .  .  .  .  .  .  .  }
+   260  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   261  .  .  .  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:47:11
+   262  .  .  .  .  .  .  .  .  .  .  Name: "NewState"
+   263  .  .  .  .  .  .  .  .  .  }
+   264  .  .  .  .  .  .  .  .  }
+   265  .  .  .  .  .  .  .  .  Lparen: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:47:19
+   266  .  .  .  .  .  .  .  .  Ellipsis: -
+   267  .  .  .  .  .  .  .  .  Rparen: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:47:20
+   268  .  .  .  .  .  .  .  }
+   269  .  .  .  .  .  .  }
+   270  .  .  .  .  .  }
+   271  .  .  .  .  .  1: *ast.DeferStmt {
+   272  .  .  .  .  .  .  Defer: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:48:2
+   273  .  .  .  .  .  .  Call: *ast.CallExpr {
+   274  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+   275  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   276  .  .  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:48:8
+   277  .  .  .  .  .  .  .  .  .  Name: "L"
+   278  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 244)
+   279  .  .  .  .  .  .  .  .  }
+   280  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   281  .  .  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:48:10
+   282  .  .  .  .  .  .  .  .  .  Name: "Close"
+   283  .  .  .  .  .  .  .  .  }
+   284  .  .  .  .  .  .  .  }
+   285  .  .  .  .  .  .  .  Lparen: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:48:15
+   286  .  .  .  .  .  .  .  Ellipsis: -
+   287  .  .  .  .  .  .  .  Rparen: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:48:16
+   288  .  .  .  .  .  .  }
+   289  .  .  .  .  .  }
+   290  .  .  .  .  .  2: *ast.AssignStmt {
+   291  .  .  .  .  .  .  Lhs: []ast.Expr (len = 1) {
+   292  .  .  .  .  .  .  .  0: *ast.Ident {
+   293  .  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:50:2
+   294  .  .  .  .  .  .  .  .  Name: "err"
+   295  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   296  .  .  .  .  .  .  .  .  .  Kind: var
+   297  .  .  .  .  .  .  .  .  .  Name: "err"
+   298  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 290)
+   299  .  .  .  .  .  .  .  .  }
+   300  .  .  .  .  .  .  .  }
+   301  .  .  .  .  .  .  }
+   302  .  .  .  .  .  .  TokPos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:50:6
+   303  .  .  .  .  .  .  Tok: :=
+   304  .  .  .  .  .  .  Rhs: []ast.Expr (len = 1) {
+   305  .  .  .  .  .  .  .  0: *ast.CallExpr {
+   306  .  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+   307  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   308  .  .  .  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:50:9
+   309  .  .  .  .  .  .  .  .  .  .  Name: "L"
+   310  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 244)
+   311  .  .  .  .  .  .  .  .  .  }
+   312  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   313  .  .  .  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:50:11
+   314  .  .  .  .  .  .  .  .  .  .  Name: "DoString"
+   315  .  .  .  .  .  .  .  .  .  }
+   316  .  .  .  .  .  .  .  .  }
+   317  .  .  .  .  .  .  .  .  Lparen: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:50:19
+   318  .  .  .  .  .  .  .  .  Args: []ast.Expr (len = 1) {
+   319  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   320  .  .  .  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:50:20
+   321  .  .  .  .  .  .  .  .  .  .  Name: "luaStr"
+   322  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 200)
+   323  .  .  .  .  .  .  .  .  .  }
+   324  .  .  .  .  .  .  .  .  }
+   325  .  .  .  .  .  .  .  .  Ellipsis: -
+   326  .  .  .  .  .  .  .  .  Rparen: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:50:26
+   327  .  .  .  .  .  .  .  }
+   328  .  .  .  .  .  .  }
+   329  .  .  .  .  .  }
+   330  .  .  .  .  .  3: *ast.IfStmt {
+   331  .  .  .  .  .  .  If: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:51:2
+   332  .  .  .  .  .  .  Cond: *ast.BinaryExpr {
+   333  .  .  .  .  .  .  .  X: *ast.Ident {
+   334  .  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:51:5
+   335  .  .  .  .  .  .  .  .  Name: "err"
+   336  .  .  .  .  .  .  .  .  Obj: *(obj @ 295)
+   337  .  .  .  .  .  .  .  }
+   338  .  .  .  .  .  .  .  OpPos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:51:9
+   339  .  .  .  .  .  .  .  Op: !=
+   340  .  .  .  .  .  .  .  Y: *ast.Ident {
+   341  .  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:51:12
+   342  .  .  .  .  .  .  .  .  Name: "nil"
+   343  .  .  .  .  .  .  .  }
+   344  .  .  .  .  .  .  }
+   345  .  .  .  .  .  .  Body: *ast.BlockStmt {
+   346  .  .  .  .  .  .  .  Lbrace: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:51:16
+   347  .  .  .  .  .  .  .  List: []ast.Stmt (len = 1) {
+   348  .  .  .  .  .  .  .  .  0: *ast.ExprStmt {
+   349  .  .  .  .  .  .  .  .  .  X: *ast.CallExpr {
+   350  .  .  .  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+   351  .  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   352  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:52:3
+   353  .  .  .  .  .  .  .  .  .  .  .  .  Name: "fmt"
+   354  .  .  .  .  .  .  .  .  .  .  .  }
+   355  .  .  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   356  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:52:7
+   357  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Println"
+   358  .  .  .  .  .  .  .  .  .  .  .  }
+   359  .  .  .  .  .  .  .  .  .  .  }
+   360  .  .  .  .  .  .  .  .  .  .  Lparen: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:52:14
+   361  .  .  .  .  .  .  .  .  .  .  Args: []ast.Expr (len = 2) {
+   362  .  .  .  .  .  .  .  .  .  .  .  0: *ast.BasicLit {
+   363  .  .  .  .  .  .  .  .  .  .  .  .  ValuePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:52:15
+   364  .  .  .  .  .  .  .  .  .  .  .  .  Kind: STRING
+   365  .  .  .  .  .  .  .  .  .  .  .  .  Value: "\"Error executing Lua script:\""
+   366  .  .  .  .  .  .  .  .  .  .  .  }
+   367  .  .  .  .  .  .  .  .  .  .  .  1: *ast.Ident {
+   368  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:52:46
+   369  .  .  .  .  .  .  .  .  .  .  .  .  Name: "err"
+   370  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 295)
+   371  .  .  .  .  .  .  .  .  .  .  .  }
+   372  .  .  .  .  .  .  .  .  .  .  }
+   373  .  .  .  .  .  .  .  .  .  .  Ellipsis: -
+   374  .  .  .  .  .  .  .  .  .  .  Rparen: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:52:49
+   375  .  .  .  .  .  .  .  .  .  }
+   376  .  .  .  .  .  .  .  .  }
+   377  .  .  .  .  .  .  .  }
+   378  .  .  .  .  .  .  .  Rbrace: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:53:2
+   379  .  .  .  .  .  .  }
+   380  .  .  .  .  .  }
+   381  .  .  .  .  }
+   382  .  .  .  .  Rbrace: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:54:1
+   383  .  .  .  }
+   384  .  .  }
+   385  .  .  3: *ast.FuncDecl {
+   386  .  .  .  Name: *ast.Ident {
+   387  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:56:6
+   388  .  .  .  .  Name: "PrintRaw"
+   389  .  .  .  .  Obj: *ast.Object {
+   390  .  .  .  .  .  Kind: func
+   391  .  .  .  .  .  Name: "PrintRaw"
+   392  .  .  .  .  .  Decl: *(obj @ 385)
+   393  .  .  .  .  }
+   394  .  .  .  }
+   395  .  .  .  Type: *ast.FuncType {
+   396  .  .  .  .  Func: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:56:1
+   397  .  .  .  .  Params: *ast.FieldList {
+   398  .  .  .  .  .  Opening: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:56:14
+   399  .  .  .  .  .  Closing: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:56:15
+   400  .  .  .  .  }
+   401  .  .  .  }
+   402  .  .  .  Body: *ast.BlockStmt {
+   403  .  .  .  .  Lbrace: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:56:17
+   404  .  .  .  .  List: []ast.Stmt (len = 11) {
+   405  .  .  .  .  .  0: *ast.ExprStmt {
+   406  .  .  .  .  .  .  X: *ast.CallExpr {
+   407  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+   408  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   409  .  .  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:57:2
+   410  .  .  .  .  .  .  .  .  .  Name: "fmt"
+   411  .  .  .  .  .  .  .  .  }
+   412  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   413  .  .  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:57:6
+   414  .  .  .  .  .  .  .  .  .  Name: "Println"
+   415  .  .  .  .  .  .  .  .  }
+   416  .  .  .  .  .  .  .  }
+   417  .  .  .  .  .  .  .  Lparen: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:57:13
+   418  .  .  .  .  .  .  .  Args: []ast.Expr (len = 1) {
+   419  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   420  .  .  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:57:14
+   421  .  .  .  .  .  .  .  .  .  Name: "cssStr"
+   422  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 53)
+   423  .  .  .  .  .  .  .  .  }
+   424  .  .  .  .  .  .  .  }
+   425  .  .  .  .  .  .  .  Ellipsis: -
+   426  .  .  .  .  .  .  .  Rparen: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:57:20
+   427  .  .  .  .  .  .  }
+   428  .  .  .  .  .  }
+   429  .  .  .  .  .  1: *ast.ExprStmt {
+   430  .  .  .  .  .  .  X: *ast.CallExpr {
+   431  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+   432  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   433  .  .  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:58:2
+   434  .  .  .  .  .  .  .  .  .  Name: "fmt"
+   435  .  .  .  .  .  .  .  .  }
+   436  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   437  .  .  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:58:6
+   438  .  .  .  .  .  .  .  .  .  Name: "Println"
+   439  .  .  .  .  .  .  .  .  }
+   440  .  .  .  .  .  .  .  }
+   441  .  .  .  .  .  .  .  Lparen: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:58:13
+   442  .  .  .  .  .  .  .  Args: []ast.Expr (len = 1) {
+   443  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   444  .  .  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:58:14
+   445  .  .  .  .  .  .  .  .  .  Name: "tsStr"
+   446  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 74)
+   447  .  .  .  .  .  .  .  .  }
+   448  .  .  .  .  .  .  .  }
+   449  .  .  .  .  .  .  .  Ellipsis: -
+   450  .  .  .  .  .  .  .  Rparen: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:58:19
+   451  .  .  .  .  .  .  }
+   452  .  .  .  .  .  }
+   453  .  .  .  .  .  2: *ast.ExprStmt {
+   454  .  .  .  .  .  .  X: *ast.CallExpr {
+   455  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+   456  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   457  .  .  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:59:2
+   458  .  .  .  .  .  .  .  .  .  Name: "fmt"
+   459  .  .  .  .  .  .  .  .  }
+   460  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   461  .  .  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:59:6
+   462  .  .  .  .  .  .  .  .  .  Name: "Println"
+   463  .  .  .  .  .  .  .  .  }
+   464  .  .  .  .  .  .  .  }
+   465  .  .  .  .  .  .  .  Lparen: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:59:13
+   466  .  .  .  .  .  .  .  Args: []ast.Expr (len = 1) {
+   467  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   468  .  .  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:59:14
+   469  .  .  .  .  .  .  .  .  .  Name: "htmlStr"
+   470  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 95)
+   471  .  .  .  .  .  .  .  .  }
+   472  .  .  .  .  .  .  .  }
+   473  .  .  .  .  .  .  .  Ellipsis: -
+   474  .  .  .  .  .  .  .  Rparen: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:59:21
+   475  .  .  .  .  .  .  }
+   476  .  .  .  .  .  }
+   477  .  .  .  .  .  3: *ast.ExprStmt {
+   478  .  .  .  .  .  .  X: *ast.CallExpr {
+   479  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+   480  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   481  .  .  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:60:2
+   482  .  .  .  .  .  .  .  .  .  Name: "fmt"
+   483  .  .  .  .  .  .  .  .  }
+   484  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   485  .  .  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:60:6
+   486  .  .  .  .  .  .  .  .  .  Name: "Println"
+   487  .  .  .  .  .  .  .  .  }
+   488  .  .  .  .  .  .  .  }
+   489  .  .  .  .  .  .  .  Lparen: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:60:13
+   490  .  .  .  .  .  .  .  Args: []ast.Expr (len = 1) {
+   491  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   492  .  .  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:60:14
+   493  .  .  .  .  .  .  .  .  .  Name: "ymlStr"
+   494  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 137)
+   495  .  .  .  .  .  .  .  .  }
+   496  .  .  .  .  .  .  .  }
+   497  .  .  .  .  .  .  .  Ellipsis: -
+   498  .  .  .  .  .  .  .  Rparen: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:60:20
+   499  .  .  .  .  .  .  }
+   500  .  .  .  .  .  }
+   501  .  .  .  .  .  4: *ast.ExprStmt {
+   502  .  .  .  .  .  .  X: *ast.CallExpr {
+   503  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+   504  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   505  .  .  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:61:2
+   506  .  .  .  .  .  .  .  .  .  Name: "fmt"
+   507  .  .  .  .  .  .  .  .  }
+   508  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   509  .  .  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:61:6
+   510  .  .  .  .  .  .  .  .  .  Name: "Println"
+   511  .  .  .  .  .  .  .  .  }
+   512  .  .  .  .  .  .  .  }
+   513  .  .  .  .  .  .  .  Lparen: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:61:13
+   514  .  .  .  .  .  .  .  Args: []ast.Expr (len = 1) {
+   515  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   516  .  .  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:61:14
+   517  .  .  .  .  .  .  .  .  .  Name: "xmlStr"
+   518  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 116)
+   519  .  .  .  .  .  .  .  .  }
+   520  .  .  .  .  .  .  .  }
+   521  .  .  .  .  .  .  .  Ellipsis: -
+   522  .  .  .  .  .  .  .  Rparen: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:61:20
+   523  .  .  .  .  .  .  }
+   524  .  .  .  .  .  }
+   525  .  .  .  .  .  5: *ast.ExprStmt {
+   526  .  .  .  .  .  .  X: *ast.CallExpr {
+   527  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+   528  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   529  .  .  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:62:2
+   530  .  .  .  .  .  .  .  .  .  Name: "fmt"
+   531  .  .  .  .  .  .  .  .  }
+   532  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   533  .  .  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:62:6
+   534  .  .  .  .  .  .  .  .  .  Name: "Println"
+   535  .  .  .  .  .  .  .  .  }
+   536  .  .  .  .  .  .  .  }
+   537  .  .  .  .  .  .  .  Lparen: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:62:13
+   538  .  .  .  .  .  .  .  Args: []ast.Expr (len = 1) {
+   539  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   540  .  .  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:62:14
+   541  .  .  .  .  .  .  .  .  .  Name: "shStr"
+   542  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 158)
+   543  .  .  .  .  .  .  .  .  }
+   544  .  .  .  .  .  .  .  }
+   545  .  .  .  .  .  .  .  Ellipsis: -
+   546  .  .  .  .  .  .  .  Rparen: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:62:19
+   547  .  .  .  .  .  .  }
+   548  .  .  .  .  .  }
+   549  .  .  .  .  .  6: *ast.ExprStmt {
+   550  .  .  .  .  .  .  X: *ast.CallExpr {
+   551  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+   552  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   553  .  .  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:63:2
+   554  .  .  .  .  .  .  .  .  .  Name: "fmt"
+   555  .  .  .  .  .  .  .  .  }
+   556  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   557  .  .  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:63:6
+   558  .  .  .  .  .  .  .  .  .  Name: "Println"
+   559  .  .  .  .  .  .  .  .  }
+   560  .  .  .  .  .  .  .  }
+   561  .  .  .  .  .  .  .  Lparen: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:63:13
+   562  .  .  .  .  .  .  .  Args: []ast.Expr (len = 1) {
+   563  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   564  .  .  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:63:14
+   565  .  .  .  .  .  .  .  .  .  Name: "luaStr"
+   566  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 200)
+   567  .  .  .  .  .  .  .  .  }
+   568  .  .  .  .  .  .  .  }
+   569  .  .  .  .  .  .  .  Ellipsis: -
+   570  .  .  .  .  .  .  .  Rparen: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:63:20
+   571  .  .  .  .  .  .  }
+   572  .  .  .  .  .  }
+   573  .  .  .  .  .  7: *ast.ExprStmt {
+   574  .  .  .  .  .  .  X: *ast.CallExpr {
+   575  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+   576  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   577  .  .  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:64:2
+   578  .  .  .  .  .  .  .  .  .  Name: "fmt"
+   579  .  .  .  .  .  .  .  .  }
+   580  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   581  .  .  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:64:6
+   582  .  .  .  .  .  .  .  .  .  Name: "Println"
+   583  .  .  .  .  .  .  .  .  }
+   584  .  .  .  .  .  .  .  }
+   585  .  .  .  .  .  .  .  Lparen: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:64:13
+   586  .  .  .  .  .  .  .  Args: []ast.Expr (len = 1) {
+   587  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   588  .  .  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:64:14
+   589  .  .  .  .  .  .  .  .  .  Name: "pyStr"
+   590  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 179)
+   591  .  .  .  .  .  .  .  .  }
+   592  .  .  .  .  .  .  .  }
+   593  .  .  .  .  .  .  .  Ellipsis: -
+   594  .  .  .  .  .  .  .  Rparen: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:64:19
+   595  .  .  .  .  .  .  }
+   596  .  .  .  .  .  }
+   597  .  .  .  .  .  8: *ast.AssignStmt {
+   598  .  .  .  .  .  .  Lhs: []ast.Expr (len = 2) {
+   599  .  .  .  .  .  .  .  0: *ast.Ident {
+   600  .  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:66:2
+   601  .  .  .  .  .  .  .  .  Name: "db"
+   602  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   603  .  .  .  .  .  .  .  .  .  Kind: var
+   604  .  .  .  .  .  .  .  .  .  Name: "db"
+   605  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 597)
+   606  .  .  .  .  .  .  .  .  }
+   607  .  .  .  .  .  .  .  }
+   608  .  .  .  .  .  .  .  1: *ast.Ident {
+   609  .  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:66:6
+   610  .  .  .  .  .  .  .  .  Name: "_"
+   611  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   612  .  .  .  .  .  .  .  .  .  Kind: var
+   613  .  .  .  .  .  .  .  .  .  Name: "_"
+   614  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 597)
+   615  .  .  .  .  .  .  .  .  }
+   616  .  .  .  .  .  .  .  }
+   617  .  .  .  .  .  .  }
+   618  .  .  .  .  .  .  TokPos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:66:8
+   619  .  .  .  .  .  .  Tok: :=
+   620  .  .  .  .  .  .  Rhs: []ast.Expr (len = 1) {
+   621  .  .  .  .  .  .  .  0: *ast.CallExpr {
+   622  .  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+   623  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   624  .  .  .  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:66:11
+   625  .  .  .  .  .  .  .  .  .  .  Name: "sql"
+   626  .  .  .  .  .  .  .  .  .  }
+   627  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   628  .  .  .  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:66:15
+   629  .  .  .  .  .  .  .  .  .  .  Name: "Open"
+   630  .  .  .  .  .  .  .  .  .  }
+   631  .  .  .  .  .  .  .  .  }
+   632  .  .  .  .  .  .  .  .  Lparen: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:66:19
+   633  .  .  .  .  .  .  .  .  Args: []ast.Expr (len = 2) {
+   634  .  .  .  .  .  .  .  .  .  0: *ast.BasicLit {
+   635  .  .  .  .  .  .  .  .  .  .  ValuePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:66:20
+   636  .  .  .  .  .  .  .  .  .  .  Kind: STRING
+   637  .  .  .  .  .  .  .  .  .  .  Value: "\"sqlite3\""
+   638  .  .  .  .  .  .  .  .  .  }
+   639  .  .  .  .  .  .  .  .  .  1: *ast.BasicLit {
+   640  .  .  .  .  .  .  .  .  .  .  ValuePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:66:31
+   641  .  .  .  .  .  .  .  .  .  .  Kind: STRING
+   642  .  .  .  .  .  .  .  .  .  .  Value: "\"./biz_db\""
+   643  .  .  .  .  .  .  .  .  .  }
+   644  .  .  .  .  .  .  .  .  }
+   645  .  .  .  .  .  .  .  .  Ellipsis: -
+   646  .  .  .  .  .  .  .  .  Rparen: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:66:41
+   647  .  .  .  .  .  .  .  }
+   648  .  .  .  .  .  .  }
+   649  .  .  .  .  .  }
+   650  .  .  .  .  .  9: *ast.ExprStmt {
+   651  .  .  .  .  .  .  X: *ast.CallExpr {
+   652  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+   653  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   654  .  .  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:67:2
+   655  .  .  .  .  .  .  .  .  .  Name: "db"
+   656  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 602)
+   657  .  .  .  .  .  .  .  .  }
+   658  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   659  .  .  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:67:5
+   660  .  .  .  .  .  .  .  .  .  Name: "Exec"
+   661  .  .  .  .  .  .  .  .  }
+   662  .  .  .  .  .  .  .  }
+   663  .  .  .  .  .  .  .  Lparen: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:67:9
+   664  .  .  .  .  .  .  .  Args: []ast.Expr (len = 1) {
+   665  .  .  .  .  .  .  .  .  0: *ast.BasicLit {
+   666  .  .  .  .  .  .  .  .  .  ValuePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:67:21
+   667  .  .  .  .  .  .  .  .  .  Kind: STRING
+   668  .  .  .  .  .  .  .  .  .  Value: "`\n\n\t`"
+   669  .  .  .  .  .  .  .  .  }
+   670  .  .  .  .  .  .  .  }
+   671  .  .  .  .  .  .  .  Ellipsis: -
+   672  .  .  .  .  .  .  .  Rparen: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:69:3
+   673  .  .  .  .  .  .  }
+   674  .  .  .  .  .  }
+   675  .  .  .  .  .  10: *ast.ExprStmt {
+   676  .  .  .  .  .  .  X: *ast.CallExpr {
+   677  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+   678  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   679  .  .  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:71:2
+   680  .  .  .  .  .  .  .  .  .  Name: "db"
+   681  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 602)
+   682  .  .  .  .  .  .  .  .  }
+   683  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   684  .  .  .  .  .  .  .  .  .  NamePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:71:5
+   685  .  .  .  .  .  .  .  .  .  Name: "Exec"
+   686  .  .  .  .  .  .  .  .  }
+   687  .  .  .  .  .  .  .  }
+   688  .  .  .  .  .  .  .  Lparen: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:71:9
+   689  .  .  .  .  .  .  .  Args: []ast.Expr (len = 2) {
+   690  .  .  .  .  .  .  .  .  0: *ast.BasicLit {
+   691  .  .  .  .  .  .  .  .  .  ValuePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:71:21
+   692  .  .  .  .  .  .  .  .  .  Kind: STRING
+   693  .  .  .  .  .  .  .  .  .  Value: "`\n\t\tSELECT * FROM users WHERE keyword\n\t`"
+   694  .  .  .  .  .  .  .  .  }
+   695  .  .  .  .  .  .  .  .  1: *ast.BasicLit {
+   696  .  .  .  .  .  .  .  .  .  ValuePos: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:73:5
+   697  .  .  .  .  .  .  .  .  .  Kind: STRING
+   698  .  .  .  .  .  .  .  .  .  Value: "\"bracket\""
+   699  .  .  .  .  .  .  .  .  }
+   700  .  .  .  .  .  .  .  }
+   701  .  .  .  .  .  .  .  Ellipsis: -
+   702  .  .  .  .  .  .  .  Rparen: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:73:14
+   703  .  .  .  .  .  .  }
+   704  .  .  .  .  .  }
+   705  .  .  .  .  }
+   706  .  .  .  .  Rbrace: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:75:1
+   707  .  .  .  }
+   708  .  .  }
+   709  .  }
+   710  .  FileStart: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:1:1
+   711  .  FileEnd: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:75:3
+   712  .  Scope: *ast.Scope {
+   713  .  .  Objects: map[string]*ast.Object (len = 10) {
+   714  .  .  .  "xmlStr": *(obj @ 116)
+   715  .  .  .  "ymlStr": *(obj @ 137)
+   716  .  .  .  "shStr": *(obj @ 158)
+   717  .  .  .  "pyStr": *(obj @ 179)
+   718  .  .  .  "main": *(obj @ 223)
+   719  .  .  .  "cssStr": *(obj @ 53)
+   720  .  .  .  "tsStr": *(obj @ 74)
+   721  .  .  .  "htmlStr": *(obj @ 95)
+   722  .  .  .  "luaStr": *(obj @ 200)
+   723  .  .  .  "PrintRaw": *(obj @ 389)
+   724  .  .  }
+   725  .  }
+   726  .  Imports: []*ast.ImportSpec (len = 3) {
+   727  .  .  0: *(obj @ 12)
+   728  .  .  1: *(obj @ 20)
+   729  .  .  2: *(obj @ 28)
+   730  .  }
+   731  .  Unresolved: []*ast.Ident (len = 12) {
+   732  .  .  0: *(obj @ 256)
+   733  .  .  1: *(obj @ 340)
+   734  .  .  2: *(obj @ 351)
+   735  .  .  3: *(obj @ 408)
+   736  .  .  4: *(obj @ 432)
+   737  .  .  5: *(obj @ 456)
+   738  .  .  6: *(obj @ 480)
+   739  .  .  7: *(obj @ 504)
+   740  .  .  8: *(obj @ 528)
+   741  .  .  9: *(obj @ 552)
+   742  .  .  10: *(obj @ 576)
+   743  .  .  11: *(obj @ 623)
+   744  .  }
+   745  .  Comments: []*ast.CommentGroup (len = 11) {
+   746  .  .  0: *ast.CommentGroup {
+   747  .  .  .  List: []*ast.Comment (len = 1) {
+   748  .  .  .  .  0: *ast.Comment {
+   749  .  .  .  .  .  Slash: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:11:11
+   750  .  .  .  .  .  Text: "/* css */"
+   751  .  .  .  .  }
+   752  .  .  .  }
+   753  .  .  }
+   754  .  .  1: *ast.CommentGroup {
+   755  .  .  .  List: []*ast.Comment (len = 1) {
+   756  .  .  .  .  0: *ast.Comment {
+   757  .  .  .  .  .  Slash: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:16:10
+   758  .  .  .  .  .  Text: "/* ts */"
+   759  .  .  .  .  }
+   760  .  .  .  }
+   761  .  .  }
+   762  .  .  2: *ast.CommentGroup {
+   763  .  .  .  List: []*ast.Comment (len = 1) {
+   764  .  .  .  .  0: *ast.Comment {
+   765  .  .  .  .  .  Slash: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:19:12
+   766  .  .  .  .  .  Text: "/* html */"
+   767  .  .  .  .  }
+   768  .  .  .  }
+   769  .  .  }
+   770  .  .  3: *ast.CommentGroup {
+   771  .  .  .  List: []*ast.Comment (len = 1) {
+   772  .  .  .  .  0: *ast.Comment {
+   773  .  .  .  .  .  Slash: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:21:11
+   774  .  .  .  .  .  Text: "/* xml */"
+   775  .  .  .  .  }
+   776  .  .  .  }
+   777  .  .  }
+   778  .  .  4: *ast.CommentGroup {
+   779  .  .  .  List: []*ast.Comment (len = 1) {
+   780  .  .  .  .  0: *ast.Comment {
+   781  .  .  .  .  .  Slash: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:26:11
+   782  .  .  .  .  .  Text: "/* yml */"
+   783  .  .  .  .  }
+   784  .  .  .  }
+   785  .  .  }
+   786  .  .  5: *ast.CommentGroup {
+   787  .  .  .  List: []*ast.Comment (len = 1) {
+   788  .  .  .  .  0: *ast.Comment {
+   789  .  .  .  .  .  Slash: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:30:10
+   790  .  .  .  .  .  Text: "/* sh */"
+   791  .  .  .  .  }
+   792  .  .  .  }
+   793  .  .  }
+   794  .  .  6: *ast.CommentGroup {
+   795  .  .  .  List: []*ast.Comment (len = 1) {
+   796  .  .  .  .  0: *ast.Comment {
+   797  .  .  .  .  .  Slash: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:32:10
+   798  .  .  .  .  .  Text: "/* py */"
+   799  .  .  .  .  }
+   800  .  .  .  }
+   801  .  .  }
+   802  .  .  7: *ast.CommentGroup {
+   803  .  .  .  List: []*ast.Comment (len = 1) {
+   804  .  .  .  .  0: *ast.Comment {
+   805  .  .  .  .  .  Slash: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:34:11
+   806  .  .  .  .  .  Text: "/* lua */"
+   807  .  .  .  .  }
+   808  .  .  .  }
+   809  .  .  }
+   810  .  .  8: *ast.CommentGroup {
+   811  .  .  .  List: []*ast.Comment (len = 1) {
+   812  .  .  .  .  0: *ast.Comment {
+   813  .  .  .  .  .  Slash: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:49:2
+   814  .  .  .  .  .  Text: "// Lua 脚本"
+   815  .  .  .  .  }
+   816  .  .  .  }
+   817  .  .  }
+   818  .  .  9: *ast.CommentGroup {
+   819  .  .  .  List: []*ast.Comment (len = 1) {
+   820  .  .  .  .  0: *ast.Comment {
+   821  .  .  .  .  .  Slash: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:67:11
+   822  .  .  .  .  .  Text: "/* sql */"
+   823  .  .  .  .  }
+   824  .  .  .  }
+   825  .  .  }
+   826  .  .  10: *ast.CommentGroup {
+   827  .  .  .  List: []*ast.Comment (len = 1) {
+   828  .  .  .  .  0: *ast.Comment {
+   829  .  .  .  .  .  Slash: c:\/Users/33306/Documents/vscode/vscode-extensions/test-dir/run.go:71:11
+   830  .  .  .  .  .  Text: "/* sql */"
+   831  .  .  .  .  }
+   832  .  .  .  }
+   833  .  .  }
+   834  .  }
+   835  .  GoVersion: ""
+   836  }

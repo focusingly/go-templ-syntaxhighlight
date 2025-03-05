@@ -86,6 +86,7 @@ export const loadClientOptions = (): LanguageClientOptions => {
 
   return {
     documentSelector: [{ scheme: "file", language: "go" }],
+    stdioEncoding: "utf8",
     markdown: {
       isTrusted: true,
       supportHtml: true

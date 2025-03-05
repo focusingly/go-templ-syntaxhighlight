@@ -20,9 +20,7 @@ type LspServer struct {
 
 // Handle implements jsonrpc2.Handler.
 func (l *LspServer) Handle(ctx context.Context, conn *jsonrpc2.Conn, req *jsonrpc2.Request) {
-	var fusionHandler = handler.DefaultFusionHandler
-
-	// 尝试处理错误
+	fusionHandler := handler.DefaultFusionHandler
 	defer func() {
 		if err := recover(); err != nil {
 			conn.ReplyWithError(ctx, req.ID, &jsonrpc2.Error{
@@ -36,10 +34,10 @@ func (l *LspServer) Handle(ctx context.Context, conn *jsonrpc2.Conn, req *jsonrp
 	case protocol.MethodInitialize:
 		resp := protocol.InitializeResult{
 			Capabilities: protocol.ServerCapabilities{
-				// HoverProvider: &protocol.HoverOptions{},
 				CodeLensProvider: &protocol.CodeLensOptions{
 					ResolveProvider: &protocol.True,
 				},
+				Workspace: &protocol.ServerCapabilitiesWorkspace{},
 				CompletionProvider: &protocol.CompletionOptions{
 					ResolveProvider:   &protocol.True,
 					TriggerCharacters: []string{},
@@ -53,16 +51,15 @@ func (l *LspServer) Handle(ctx context.Context, conn *jsonrpc2.Conn, req *jsonrp
 		conn.Reply(ctx, req.ID, &resp)
 	case protocol.MethodInitialized:
 		resp := protocol.InitializeResult{
-			Capabilities: protocol.ServerCapabilities{},
 			ServerInfo: &protocol.InitializeResultServerInfo{
 				Name:    serverName,
 				Version: &serverVersion,
 			},
 		}
 		conn.Reply(ctx, req.ID, resp)
+		conn.Notify(context.TODO(), protocol.MethodSetTrace, "init successfully")
 	case protocol.MethodTextDocumentCompletion:
 		fusionHandler.ParseCompletionRequest(ctx, conn, req)
-	// case protocol.MethodTextDocumentDidChange:
 	case protocol.MethodCodeLensResolve:
 	case protocol.ServerWorkspaceCodeLensRefresh:
 	case protocol.MethodExit:

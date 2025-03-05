@@ -3,9 +3,9 @@ package handler
 import (
 	"context"
 	"encoding/json"
-	"os"
 	"sql-inline-lsp/model"
 	"sql-inline-lsp/service"
+	"sql-inline-lsp/utility"
 
 	"github.com/sourcegraph/jsonrpc2"
 	protocol "github.com/tliron/glsp/protocol_3_16"
@@ -17,8 +17,6 @@ type fuseHandler struct {
 var DefaultFusionHandler = &fuseHandler{}
 
 var (
-	fileService       = service.DefaultFileService
-	extractService    = service.DefaultExtractService
 	completionService = service.DefaultProvideService
 )
 
@@ -31,17 +29,15 @@ func (f *fuseHandler) ParseCompletionRequest(ctx context.Context, conn *jsonrpc2
 	if err := json.Unmarshal(bf, &parsedReq); err != nil {
 		return
 	}
-	url, ok := fileService.ParseFileProtocolURL(parsedReq.TextDocument.URI)
-	if !ok {
-		return
-	}
-
-	bf2, err := os.ReadFile(url)
+	normalPath, err := utility.ConvertFileURLToPath(parsedReq.TextDocument.URI)
 	if err != nil {
 		return
 	}
-	positions := extractService.GetAllRawSqlCommentedStringPos(string(bf2))
-	if !extractService.PositionInRange(parsedReq, positions) {
+	result, err := utility.FindSQLPositions(normalPath)
+	if err != nil {
+		return
+	}
+	if !utility.PosInScopes(result, parsedReq) {
 		return
 	}
 	completions := completionService.ProvideCompletionItems()

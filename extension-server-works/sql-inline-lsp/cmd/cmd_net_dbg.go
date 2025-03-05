@@ -1,3 +1,6 @@
+//go:build !stdProd
+// +build !stdProd
+
 package cmd
 
 import (
